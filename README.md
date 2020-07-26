@@ -31,7 +31,7 @@ pip install -r requirements.txt
 ### Algorithms
 
 #### Hidden Markov Models (hmm_analysis and hmm_models)
-This implements the HMM pipelines from [hmmlearn](https://hmmlearn.readthedocs.io/en/latest/) (for non-Bayesian HMMs with Gaussian emissions) and [pyhsmm](https://github.com/mattjj/pyhsmm) (for ordinary [[1]] and sticky HDP-HMMs [[2]] with Gaussian emissions) for CAPS ELS data.
+This implements the HMM pipelines from [hmmlearn](https://hmmlearn.readthedocs.io/en/latest/) (for non-Bayesian HMMs with Gaussian emissions) and [pyhsmm](https://github.com/mattjj/pyhsmm) (for ordinary [[1]](https://www.stat.berkeley.edu/~aldous/206-Exch/Papers/hierarchical_dirichlet.pdf) and sticky HDP-HMMs [[2]](https://icml.cc/Conferences/2008/papers/305.pdf) with Gaussian emissions) for CAPS ELS data.
 
 #### RuLSIF (rulsif_analysis)
 This implements the RuLSIF pipeline, from [[3]](https://arxiv.org/pdf/1203.0453.pdf), using [densratio](https://github.com/hoxo-m/densratio_py), for CAPS ELS data.
