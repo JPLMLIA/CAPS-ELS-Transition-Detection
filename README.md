@@ -43,10 +43,10 @@ This implements the HOTSAX pipeline, from [[4]](https://www.cs.ucr.edu/~eamonn/H
 This implements the Matrix Profile pipeline, from [[6]](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=7837992&isnumber=7837813), using [matrixprofile-ts](https://github.com/ameya98/matrixprofile-ts), for CAPS ELS data.
 
 ### References
-[1] Teh, Y. W., Jordan, M. I., Beal, M. J., and Blei, D. M.
+[1] Teh, Y. W., Jordan, M. I., Beal, M. J., Blei, D. M.,  
 **Hierarchical Dirichlet Processes**. Journal of the American Statistical Association, 2006.
 
-[2] Fox, E. B., Sudderth, E. B., Jordan, M. I., Willsky, A. S. 
+[2] Fox, E. B., Sudderth, E. B., Jordan, M. I., Willsky, A. S.,  
 **An HDP-HMM for Systems with State Persistence**. ICML, 2008.
 
 [3] Liu, S., Yamada, M., Collier, N., Sugiyama, M.,   
@@ -58,5 +58,5 @@ This implements the Matrix Profile pipeline, from [[6]](https://ieeexplore.ieee.
 [5] Mohammad, Y., Nishida T.,  
 **Robust learning from demonstrations using multidimensional SAX**. ICCAS, 2014.
 
-[6] Yeh, C. M., Zhu, Y., Ulanova, L., Begum, N., Ding, Y., Dau, H. A., Silva, D. F., Mueen, A., Keogh, E.,
+[6] Yeh, C. M., Zhu, Y., Ulanova, L., Begum, N., Ding, Y., Dau, H. A., Silva, D. F., Mueen, A., Keogh, E.,  
 **Matrix Profile I: All Pairs Similarity Joins for Time Series: A Unifying View That Includes Motifs, Discords and Shapelets**. ICDM, 2016.
