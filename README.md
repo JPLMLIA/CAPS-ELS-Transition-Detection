@@ -1,4 +1,4 @@
-## CAPS ELS
+# Detecting Magnetic Field Transitions in CAPS ELS Data
 
 This directory contains Python scripts that operate on time-series data from CAPS ELS.
 
@@ -22,13 +22,13 @@ This directory contains Python scripts that operate on time-series data from CAP
 
 Most scripts will indicate the supported options by calling them with the *-h* flag.
 
-### Dependencies
+## Dependencies
 To run the scripts here, first install dependencies with:
 ```
 pip install -r requirements.txt
 ``` 
 
-### Algorithms
+## Algorithms
 
 #### Hidden Markov Models (hmm_analysis and hmm_models)
 This implements the HMM pipelines from [hmmlearn](https://hmmlearn.readthedocs.io/en/latest/) (for non-Bayesian HMMs with Gaussian emissions) and [pyhsmm](https://github.com/mattjj/pyhsmm) (for ordinary [[1]](https://www.stat.berkeley.edu/~aldous/206-Exch/Papers/hierarchical_dirichlet.pdf) and sticky HDP-HMMs [[2]](https://icml.cc/Conferences/2008/papers/305.pdf) with Gaussian emissions) for CAPS ELS data.
@@ -42,7 +42,7 @@ This implements the HOTSAX pipeline, from [[4]](https://www.cs.ucr.edu/~eamonn/H
 #### Matrix Profile (matrix_profile_analysis)
 This implements the Matrix Profile pipeline, from [[6]](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=7837992&isnumber=7837813), using [matrixprofile-ts](https://github.com/ameya98/matrixprofile-ts), for CAPS ELS data.
 
-### References
+## References
 [1] Teh, Y. W., Jordan, M. I., Beal, M. J., Blei, D. M.,  
 **Hierarchical Dirichlet Processes**. Journal of the American Statistical Association, 2006.
 
