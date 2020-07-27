@@ -30,6 +30,9 @@ pip install -r requirements.txt
 
 ## Algorithms
 
+#### Baseline L2-Diff (baseline_analysis)
+This implements the Baseline L2-Diff pipeline, for CAPS ELS data. This algorithm computes the L2-distance between the vectors of counts between adjacent timesteps.
+
 #### Hidden Markov Models (hmm_analysis and hmm_models)
 This implements the HMM pipelines from [hmmlearn](https://hmmlearn.readthedocs.io/en/latest/) (for non-Bayesian HMMs with Gaussian emissions) and [pyhsmm](https://github.com/mattjj/pyhsmm) (for ordinary [[1]](https://www.stat.berkeley.edu/~aldous/206-Exch/Papers/hierarchical_dirichlet.pdf) and sticky HDP-HMMs [[2]](https://icml.cc/Conferences/2008/papers/305.pdf) with Gaussian emissions) for CAPS ELS data.
 
