@@ -40,7 +40,7 @@ This implements the RuLSIF pipeline, from [[3]](https://arxiv.org/pdf/1203.0453.
 This implements the HOTSAX pipeline, from [[4]](https://www.cs.ucr.edu/~eamonn/HOT%20SAX%20%20long-ver.pdf) and [[5]](https://ieeexplore.ieee.org/document/6987960),  using [saxpy](https://github.com/ameya98/saxpy), for CAPS ELS data.
 
 #### Matrix Profile (matrix_profile_analysis)
-This implements the Multidimensional Matrix Profile using the original Matrix Profile pipeline from [[6]](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=7837992&isnumber=7837813), with [matrixprofile-ts](https://github.com/ameya98/matrixprofile-ts), for CAPS ELS data.
+This implements the Multidimensional Matrix Profile pipeline, built on top of the original Matrix Profile pipeline from [[6]](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=7837992&isnumber=7837813), with [matrixprofile-ts](https://github.com/ameya98/matrixprofile-ts), for CAPS ELS data.
 
 ## References
 [1] Teh, Y. W., Jordan, M. I., Beal, M. J., Blei, D. M.,  
