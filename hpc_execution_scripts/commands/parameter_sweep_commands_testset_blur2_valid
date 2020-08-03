@@ -1,0 +1,8 @@
+# Baseline
+${SCRIPTS_DIR}/find_scores.py baseline --transform ${TRANSFORM} --filter ${FILTER} --filter_size ${FILTER_SIZE} --bin_selection ${BIN_SELECTION} --blur_sigma ${BLUR_SIGMA} ${DATA_FILE} ${RESULTS_SUBDIR}/baseline.hdf5
+
+# Matrix Profile
+${SCRIPTS_DIR}/find_scores.py matrix_profile -w 200 -num_pca 10 --std_noise 0.8 --transform ${TRANSFORM} --filter ${FILTER} --filter_size ${FILTER_SIZE} --bin_selection ${BIN_SELECTION} --blur_sigma ${BLUR_SIGMA} --pca_components_folder ${PCA_COMPONENTS_DIR} ${DATA_FILE} ${RESULTS_SUBDIR}/mpw200n08pca10.hdf5
+
+# RuLSIF
+${SCRIPTS_DIR}/find_scores.py rulsif -n 20 -k 5 --transform ${TRANSFORM} --filter ${FILTER} --filter_size ${FILTER_SIZE} --bin_selection ${BIN_SELECTION} --blur_sigma ${BLUR_SIGMA} ${DATA_FILE} ${RESULTS_SUBDIR}/rulsifn20k5.hdf5

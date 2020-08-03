@@ -1,0 +1,23 @@
+BLUR_SIGMA: 5
+COMBINED_MATRICES_DIR: /scratch_lg/image-content/ameyasd//crossings_test_results/anscombe_transform/blur_5/ignore_unpaired/20min/new_labels/valid/
+COMBINED_MATRICES_FILE_BASENAME: /scratch_lg/image-content/ameyasd//crossings_test_results/anscombe_transform/blur_5/ignore_unpaired/20min/new_labels/valid/combined_matrices_%s.npz
+COMMANDS_FILE: /scratch_lg/image-content/ameyasd/europa-onboard-science/src/caps_els/secondary_scripts/commands/parameter_sweep_commands_testset_blur5_valid
+CREATION_COMMAND: ./create_config.py --mode test --results crossings_test_results
+  --transform anscombe_transform --ignore_unpaired --commands commands/parameter_sweep_commands_testset_blur5_valid
+  -b 5 --lbls new_labels/valid/ blur_5_testset_valid.yaml
+CROSSINGS_DIR: /scratch_lg/image-content/ameyasd/crossings_updated/
+DATA_DIR: /scratch_lg/image-content/ameyasd/crossings_updated/data/
+IGNORE_UNPAIRED: true
+LABELS_DIR: /scratch_lg/image-content/ameyasd/crossings_updated/new_labels/valid/
+LABELS_SUBDIR: new_labels/valid/
+MINIMUM_JOB_ARRAY_SIZE: 3555
+MODE: test
+NUM_ALGORITHMS: 3
+NUM_DATAFILES: 1185
+PCA_COMPONENTS_DIR: /scratch_lg/image-content/ameyasd//crossings_test_results/anscombe_transform/blur_5/ignore_unpaired/pca_components/
+RANDOM_PLOTS_DIR: /scratch_lg/image-content/ameyasd//crossings_test_results/anscombe_transform/blur_5/ignore_unpaired/random_plots/new_labels/valid/
+RESULTS_DIR: /scratch_lg/image-content/ameyasd//crossings_test_results/anscombe_transform/blur_5/ignore_unpaired/
+SCRIPTS_DIR: /scratch_lg/image-content/ameyasd/europa-onboard-science/src/caps_els/
+THRESHOLDS_DIR: /scratch_lg/image-content/ameyasd//crossings_test_results/anscombe_transform/blur_5/ignore_unpaired/thresholds/new_labels/valid/
+TIME_TOLERANCE: 20
+TRANSFORM: anscombe_transform

@@ -1,0 +1,26 @@
+BIN_SELECTION: ignore_unpaired
+BLUR_SIGMA: 2
+COMBINED_MATRICES_DIR: /scratch_lg/image-content/ameyasd//error_analysis/anscombe_transform/blur_2/ignore_unpaired/no_filter_1/20min/new_labels/mp/all/
+COMBINED_MATRICES_FILE_BASENAME: /scratch_lg/image-content/ameyasd//error_analysis/anscombe_transform/blur_2/ignore_unpaired/no_filter_1/20min/new_labels/mp/all/combined_matrices_%s.npz
+COMMANDS_FILE: /scratch_lg/image-content/ameyasd/europa-onboard-science/src/caps_els/secondary_scripts/commands/parameter_sweep_commands_testset_blur2_mp_all
+CREATION_COMMAND: ./create_config.py --mode train --results error_analysis --transform
+  anscombe_transform --bin_selection ignore_unpaired --commands commands/parameter_sweep_commands_testset_blur2_mp_all
+  -b 2 --lbls new_labels/mp/all/ blur_2_trainset_mp_all_errors.yaml
+CROSSINGS_DIR: /scratch_lg/image-content/ameyasd/crossings_updated/
+DATA_DIR: /scratch_lg/image-content/ameyasd/crossings_updated/data/
+ERROR_ANALYSIS_DIR: /scratch_lg/image-content/ameyasd//error_analysis/anscombe_transform/blur_2/ignore_unpaired/no_filter_1/error_analysis/new_labels/mp/all/
+FILTER: no_filter
+FILTER_SIZE: 1
+LABELS_DIR: /scratch_lg/image-content/ameyasd/crossings_updated/new_labels/mp/all/
+LABELS_SUBDIR: new_labels/mp/all/
+MINIMUM_JOB_ARRAY_SIZE: 36
+MODE: train
+NUM_ALGORITHMS: 4
+NUM_DATAFILES: 9
+PCA_COMPONENTS_DIR: /scratch_lg/image-content/ameyasd//error_analysis/anscombe_transform/blur_2/ignore_unpaired/no_filter_1/pca_components/
+RANDOM_PLOTS_DIR: /scratch_lg/image-content/ameyasd//error_analysis/anscombe_transform/blur_2/ignore_unpaired/no_filter_1/random_plots/new_labels/mp/all/
+RESULTS_DIR: /scratch_lg/image-content/ameyasd//error_analysis/anscombe_transform/blur_2/ignore_unpaired/no_filter_1/
+SCRIPTS_DIR: /scratch_lg/image-content/ameyasd/europa-onboard-science/src/caps_els/
+THRESHOLDS_DIR: /scratch_lg/image-content/ameyasd//error_analysis/anscombe_transform/blur_2/ignore_unpaired/no_filter_1/thresholds/new_labels/mp/all/
+TIME_TOLERANCE: 20
+TRANSFORM: anscombe_transform

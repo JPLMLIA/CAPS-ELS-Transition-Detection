@@ -1,0 +1,9 @@
+# HOT SAX
+${SCRIPTS_DIR}/find_scores.py hotsax -w 50 -n 2  -num_pca 5 --transform ${TRANSFORM} --filter ${FILTER} --filter_size ${FILTER_SIZE} --bin_selection ${BIN_SELECTION} --blur_sigma ${BLUR_SIGMA} --pca_components_folder ${PCA_COMPONENTS_DIR} ${DATA_FILE} ${RESULTS_SUBDIR}/hotsaxw50n2pca5.hdf5
+
+# Vanilla HMM
+${SCRIPTS_DIR}/find_scores.py hmm -n 2 -num_pca 5 --type vanilla --transform ${TRANSFORM} --filter ${FILTER} --filter_size ${FILTER_SIZE} --bin_selection ${BIN_SELECTION} --blur_sigma ${BLUR_SIGMA} --pca_components_folder ${PCA_COMPONENTS_DIR} ${DATA_FILE} ${RESULTS_SUBDIR}/vhmmn2pca5.hdf5
+
+# Sticky HDP-HMM
+${SCRIPTS_DIR}/find_scores.py hmm -n 2 -a 1 -g 1 -k 0.1 -num_pca 5 --type stickyhdp --transform ${TRANSFORM} --filter ${FILTER} --filter_size ${FILTER_SIZE} --bin_selection ${BIN_SELECTION} --blur_sigma ${BLUR_SIGMA} --pca_components_folder ${PCA_COMPONENTS_DIR} ${DATA_FILE} ${RESULTS_SUBDIR}/stickyhmmn2sticky01pca5.hdf5
+

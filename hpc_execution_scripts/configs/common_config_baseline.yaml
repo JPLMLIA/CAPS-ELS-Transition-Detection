@@ -1,0 +1,15 @@
+BLUR_SIGMA: 200
+COMBINED_RESULTS_DIR: /scratch_lg/image-content/ameyasd//blur_sigma_experiments/anscombe_transform/blur_200/20min/new_labels/all/
+COMBINED_RESULTS_FILE: /scratch_lg/image-content/ameyasd//blur_sigma_experiments/anscombe_transform/blur_200/20min/new_labels/all/combined_results_.npz
+COMMANDS_FILE: /scratch_lg/image-content/ameyasd/europa-onboard-science/src/caps_els/secondary_scripts/parameter_sweep_commands_baseline
+DATA_DIR: /scratch_lg/image-content/ameyasd/crossings_updated/data/
+LABELS_DIR: /scratch_lg/image-content/ameyasd/crossings_updated/new_labels/all/
+LABELS_SUBDIR: new_labels/all/
+MODE: train
+PCA_COMPONENTS_DIR: /scratch_lg/image-content/ameyasd//blur_sigma_experiments/anscombe_transform/blur_200/pca_components/
+QUERY_FOR_COMBINE: ''
+RESULTS_DIR: /scratch_lg/image-content/ameyasd//blur_sigma_experiments/anscombe_transform/blur_200/
+SCRIPTS_DIR: /scratch_lg/image-content/ameyasd/europa-onboard-science/src/caps_els/
+THRESHOLDS_DIR: /scratch_lg/image-content/ameyasd//blur_sigma_experiments/anscombe_transform/blur_200/thresholds/
+TIME_TOLERANCE: 20
+TRANSFORM: anscombe_transform

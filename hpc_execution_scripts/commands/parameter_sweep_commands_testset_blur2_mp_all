@@ -1,0 +1,11 @@
+# Baseline
+${SCRIPTS_DIR}/find_scores.py baseline --transform ${TRANSFORM} --filter ${FILTER} --filter_size ${FILTER_SIZE} --bin_selection ${BIN_SELECTION} --blur_sigma ${BLUR_SIGMA} ${DATA_FILE} ${RESULTS_SUBDIR}/baseline.hdf5
+
+# HOT SAX
+${SCRIPTS_DIR}/find_scores.py hotsax -w 100 -n 10 -num_pca 10 --transform ${TRANSFORM} --filter ${FILTER} --filter_size ${FILTER_SIZE} --bin_selection ${BIN_SELECTION} --blur_sigma ${BLUR_SIGMA} --pca_components_folder ${PCA_COMPONENTS_DIR} ${DATA_FILE} ${RESULTS_SUBDIR}/hotsaxw100n10pca10.hdf5
+
+# RuLSIF
+${SCRIPTS_DIR}/find_scores.py rulsif -n 10 -k 1 --transform ${TRANSFORM} --filter ${FILTER} --filter_size ${FILTER_SIZE} --bin_selection ${BIN_SELECTION} --blur_sigma ${BLUR_SIGMA} ${DATA_FILE} ${RESULTS_SUBDIR}/rulsifn10k1.hdf5
+
+# Vanilla HMM
+${SCRIPTS_DIR}/find_scores.py hmm -n 2 -num_pca 10 --type vanilla --transform ${TRANSFORM} --filter ${FILTER} --filter_size ${FILTER_SIZE} --bin_selection ${BIN_SELECTION} --blur_sigma ${BLUR_SIGMA} --pca_components_folder ${PCA_COMPONENTS_DIR} ${DATA_FILE} ${RESULTS_SUBDIR}/vhmmn2pca10.hdf5

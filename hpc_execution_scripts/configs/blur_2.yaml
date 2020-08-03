@@ -1,0 +1,16 @@
+BLUR_SIGMA: 0
+COMBINED_MATRICES_DIR: /scratch_lg/image-content/ameyasd//blur_sigma_experiments/anscombe_transform/blur_0/all_bins/20min/new_labels/valid/
+COMBINED_MATRICES_FILE_BASENAME: /scratch_lg/image-content/ameyasd//blur_sigma_experiments/anscombe_transform/blur_0/all_bins/20min/new_labels/valid/combined_matrices_%s.npz
+COMMANDS_FILE: /scratch_lg/image-content/ameyasd/europa-onboard-science/src/caps_els/secondary_scripts/parameter_sweep_commands
+CREATION_COMMAND: ./create_config.py blur_2.yaml --mode train --results blur_sigma_experiments
+DATA_DIR: /scratch_lg/image-content/ameyasd/crossings_updated/data/
+BIN_SELECTION: false
+LABELS_DIR: /scratch_lg/image-content/ameyasd/crossings_updated/new_labels/valid/
+LABELS_SUBDIR: new_labels/valid/
+MODE: train
+PCA_COMPONENTS_DIR: /scratch_lg/image-content/ameyasd//blur_sigma_experiments/anscombe_transform/blur_0/all_bins/pca_components/
+RESULTS_DIR: /scratch_lg/image-content/ameyasd//blur_sigma_experiments/anscombe_transform/blur_0/all_bins/
+SCRIPTS_DIR: /scratch_lg/image-content/ameyasd/europa-onboard-science/src/caps_els/
+THRESHOLDS_DIR: /scratch_lg/image-content/ameyasd//blur_sigma_experiments/anscombe_transform/blur_0/all_bins/thresholds/
+TIME_TOLERANCE: 20
+TRANSFORM: anscombe_transform

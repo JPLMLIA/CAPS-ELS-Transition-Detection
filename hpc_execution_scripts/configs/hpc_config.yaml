@@ -1,0 +1,49 @@
+# Data files to evaluate algorithms on.
+# Put 'all' to evaluate on all datafiles in the crossings list.
+# Put 'trainset' to evaluate on all datafiles in the training set.
+# Put 'testset' to evaluate on all datafiles in the test set.
+data_files:
+- 'testset'
+
+# Algorithms to be evaluated.
+algorithms:
+- 'stickyhmmn2'
+- 'stickyhmmn5'
+- 'rulsifn10k2'
+- 'rulsifn10k5'
+- 'vhmmn2'
+- 'vhmmn5'
+- 'mpw50n02'
+- 'mpw200n02'
+- 'mpw200n04'
+- 'hotsax50'
+- 'hotsax200'
+
+# The class/name for the algorithms in find_scores.py.
+algorithm_class:
+  'stickyhmmn2': 'hmm'
+  'stickyhmmn5': 'hmm'
+  'rulsifn10k2': 'rulsif'
+  'rulsifn10k5': 'rulsif'
+  'vhmmn2': 'hmm'
+  'vhmmn5': 'hmm'
+  'mpw50n02': 'matrix_profile'
+  'mpw200n02': 'matrix_profile'
+  'mpw200n04': 'matrix_profile'
+  'hotsax50': 'hotsax'
+  'hotsax200': 'hotsax'
+
+# Parameters for the algorithms.
+algorithm_parameters:
+  'stickyhmmn2': {'n': 2, '-hmm_type': 'stickyhdp', 'a': 1, 'g': 1}
+  'stickyhmmn5': {'n': 5, '-hmm_type': 'stickyhdp', 'a': 1, 'g': 1}
+  'rulsifn10k2': {'k': 2, 'n': 10} 
+  'rulsifn10k5': {'k': 5, 'n': 10} 
+  'vhmmn2': {'n': 2, '-hmm_type': 'vanilla'}
+  'vhmmn5': {'n': 5, '-hmm_type': 'vanilla'}
+  'mpw50n02': {'w': 50, 'num_pca': 10, '-std_noise': 0.2}
+  'mpw200n02': {'w': 200, 'num_pca': 10, '-std_noise': 0.2}
+  'mpw200n04': {'w': 200, 'num_pca': 10, '-std_noise': 0.4}
+  'hotsax50': {'w': 50, 'num_pca': 10, 'n': 20}
+  'hotsax200': {'w': 200, 'num_pca': 10, 'n': 20}
+

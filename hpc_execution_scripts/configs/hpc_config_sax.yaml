@@ -1,0 +1,90 @@
+# Data files to evaluate algorithms on.
+# Put 'all' to evaluate on all datafiles in the crossings list.
+# Put 'trainset' to evaluate on all datafiles in the training set.
+# Put 'testset' to evaluate on all datafiles in the test set.
+data_files:
+- 'ELS_200418018_V01'
+
+# Algorithms to be evaluated.
+algorithms:
+#- 'zscore-pca5'
+#- 'zscore-pca10'
+#- 'zscore-pca15'
+#- 'zscore-pca20'
+#- 'zscore-nopca'
+#- 'repeat-pca5'
+#- 'repeat-pca10'
+#- 'repeat-pca15'
+#- 'repeat-pca20'
+#- 'repeat-nopca'
+#- 'independent-pca5'
+#- 'independent-pca10'
+#- 'independent-pca15'
+#- 'independent-pca20'
+#- 'independent-nopca'
+#- 'energy-pca5'
+#- 'energy-pca10'
+#- 'energy-pca15'
+#- 'energy-pca20'
+#- 'energy-nopca'
+- 'brute-pca5'
+- 'brute-pca10'
+- 'brute-pca15'
+- 'brute-pca20'
+- 'brute-nopca'
+
+# The class/name for the algorithms in find_scores.py.
+algorithm_class:
+  'zscore-pca5': 'hotsax'
+  'zscore-pca10': 'hotsax'
+  'zscore-pca15': 'hotsax'
+  'zscore-pca20': 'hotsax'
+  'zscore-nopca': 'hotsax'
+  'repeat-pca5': 'hotsax'
+  'repeat-pca10': 'hotsax'
+  'repeat-pca15': 'hotsax'
+  'repeat-pca20': 'hotsax'
+  'repeat-nopca': 'hotsax'
+  'independent-pca5': 'hotsax'
+  'independent-pca10': 'hotsax'
+  'independent-pca15': 'hotsax'
+  'independent-pca20': 'hotsax'
+  'independent-nopca': 'hotsax'
+  'energy-pca5': 'hotsax'
+  'energy-pca10': 'hotsax'
+  'energy-pca15': 'hotsax'
+  'energy-pca20': 'hotsax'
+  'energy-nopca': 'hotsax'
+  'brute-pca5': 'hotsax'
+  'brute-pca10': 'hotsax'
+  'brute-pca15': 'hotsax'
+  'brute-pca20': 'hotsax'
+  'brute-nopca': 'hotsax'
+
+# Parameters for the algorithms.
+algorithm_parameters:
+  'zscore-pca5': {'w': 50, 'n': 20,  'num_pca': 5, '-sax_type': 'zscore'}
+  'zscore-pca10': {'w': 50, 'n': 20, 'num_pca': 10, '-sax_type': 'zscore'}
+  'zscore-pca15': {'w': 50, 'n': 20, 'num_pca': 15, '-sax_type': 'zscore'}
+  'zscore-pca20': {'w': 50, 'n': 20, 'num_pca': 20, '-sax_type': 'zscore'}
+  'zscore-nopca': {'w': 50, 'n': 20, '-sax_type': 'zscore'}
+  'repeat-pca5': {'w': 50, 'n': 20, 'num_pca': 5, '-sax_type': 'repeat'}
+  'repeat-pca10': {'w': 50, 'n': 20, 'num_pca': 10, '-sax_type': 'repeat'}
+  'repeat-pca15': {'w': 50, 'n': 20, 'num_pca': 15, '-sax_type': 'repeat'}
+  'repeat-pca20': {'w': 50, 'n': 20, 'num_pca': 20, '-sax_type': 'repeat'}
+  'repeat-nopca': {'w': 50, 'n': 20, '-sax_type': 'repeat'}
+  'independent-pca5': {'w': 50, 'n': 20, 'num_pca': 5, '-sax_type': 'independent'}
+  'independent-pca10': {'w': 50, 'n': 20, 'num_pca': 10, '-sax_type': 'independent'}
+  'independent-pca15': {'w': 50, 'n': 20, 'num_pca': 15, '-sax_type': 'independent'}
+  'independent-pca20': {'w': 50, 'n': 20, 'num_pca': 20, '-sax_type': 'independent'}
+  'independent-nopca': {'w': 50, 'n': 20, '-sax_type': 'independent'}
+  'energy-pca5': {'w': 50, 'n': 20, 'num_pca': 5, '-sax_type': 'energy'}
+  'energy-pca10': {'w': 50, 'n': 20, 'num_pca': 10, '-sax_type': 'energy'}
+  'energy-pca15': {'w': 50, 'n': 20, 'num_pca': 15, '-sax_type': 'energy'}
+  'energy-pca20': {'w': 50, 'n': 20, 'num_pca': 20, '-sax_type': 'energy'}
+  'energy-nopca': {'w': 50, 'n': 20, '-sax_type': 'energy'}
+  'brute-pca5': {'w': 50, 'n': 20, 'num_pca': 5, '-no_heuristics': ''}
+  'brute-pca10': {'w': 50, 'n': 20, 'num_pca': 10, '-no_heuristics': ''}
+  'brute-pca15': {'w': 50, 'n': 20, 'num_pca': 15, '-no_heuristics': ''}
+  'brute-pca20': {'w': 50, 'n': 20, 'num_pca': 20, '-no_heuristics': ''}
+  'brute-nopca': {'w': 50, 'n': 20, '-no_heuristics': ''}

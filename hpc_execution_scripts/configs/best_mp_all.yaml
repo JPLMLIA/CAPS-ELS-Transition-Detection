@@ -1,0 +1,27 @@
+BIN_SELECTION: all
+BLUR_SIGMA: 0
+COMBINED_MATRICES_DIR: /scratch_lg/image-content/ameyasd//best_mp_all/custom/20min/new_labels/mp/all/
+COMBINED_MATRICES_FILE_BASENAME: /scratch_lg/image-content/ameyasd//best_mp_all/custom/20min/new_labels/mp/all/combined_matrices_%s.npz
+COMMANDS_FILE: /scratch_lg/image-content/ameyasd/europa-onboard-science/src/caps_els/secondary_scripts/commands/parameter_sweep_commands_custom_mp_all
+CREATION_COMMAND: ./create_config.py best_mp_all.yaml --results best_mp_all --commands
+  commands/parameter_sweep_commands_custom_mp_all --lbls new_labels/mp/all/ --custom
+  --mode test
+CROSSINGS_DIR: /scratch_lg/image-content/ameyasd/crossings_updated/
+CUSTOM: true
+DATA_DIR: /scratch_lg/image-content/ameyasd/crossings_updated/data/
+ERROR_ANALYSIS_DIR: /scratch_lg/image-content/ameyasd//best_mp_all/custom/error_analysis/new_labels/mp/all/
+FILTER: no_filter
+FILTER_SIZE: 1
+LABELS_DIR: /scratch_lg/image-content/ameyasd/crossings_updated/new_labels/mp/all/
+LABELS_SUBDIR: new_labels/mp/all/
+MINIMUM_JOB_ARRAY_SIZE: 4902
+MODE: test
+NUM_ALGORITHMS: 6
+NUM_DATAFILES: 817
+PCA_COMPONENTS_DIR: /scratch_lg/image-content/ameyasd//best_mp_all/custom/pca_components/
+RANDOM_PLOTS_DIR: /scratch_lg/image-content/ameyasd//best_mp_all/custom/random_plots/new_labels/mp/all/
+RESULTS_DIR: /scratch_lg/image-content/ameyasd//best_mp_all/custom/
+SCRIPTS_DIR: /scratch_lg/image-content/ameyasd/europa-onboard-science/src/caps_els/
+THRESHOLDS_DIR: /scratch_lg/image-content/ameyasd//best_mp_all/custom/thresholds/new_labels/mp/all/
+TIME_TOLERANCE: 20
+TRANSFORM: anscombe_transform

@@ -1,0 +1,2 @@
+# Baseline
+${SCRIPTS_DIR}/find_scores.py baseline --transform ${TRANSFORM} --filter ${FILTER} --filter_size ${FILTER_SIZE} --bin_selection ${BIN_SELECTION} --blur_sigma ${BLUR_SIGMA} ${DATA_FILE} ${RESULTS_SUBDIR}/baseline.hdf5

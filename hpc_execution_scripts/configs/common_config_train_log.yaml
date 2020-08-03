@@ -1,0 +1,14 @@
+COMBINED_RESULTS_DIR: /scratch_lg/image-content/ameyasd//optimization/counts_normal_valid/log_transform/20min/new_labels/valid/
+COMBINED_RESULTS_FILE: /scratch_lg/image-content/ameyasd//optimization/counts_normal_valid/log_transform/20min/new_labels/valid/combined_results_.npz
+COMMANDS_FILE: /scratch_lg/image-content/ameyasd/europa-onboard-science/src/caps_els/secondary_scripts/parameter_sweep_commands
+DATA_DIR: /scratch_lg/image-content/ameyasd/crossings_updated/data/
+LABELS_DIR: /scratch_lg/image-content/ameyasd/crossings_updated/new_labels/valid/
+LABELS_SUBDIR: new_labels/valid/
+MODE: train
+PCA_COMPONENTS_DIR: /scratch_lg/image-content/ameyasd//optimization/counts_normal_valid/log_transform/pca_components/
+QUERY_FOR_COMBINE: ''
+RESULTS_DIR: /scratch_lg/image-content/ameyasd//optimization/counts_normal_valid/log_transform/
+SCRIPTS_DIR: /scratch_lg/image-content/ameyasd/europa-onboard-science/src/caps_els/
+THRESHOLDS_DIR: /scratch_lg/image-content/ameyasd//optimization/counts_normal_valid/log_transform/thresholds/
+TIME_TOLERANCE: 20
+TRANSFORM: log_transform

@@ -1,0 +1,5 @@
+# Matrix Profile
+${SCRIPTS_DIR}/find_scores.py matrix_profile -w 50 -num_pca 10 --std_noise 0.4 --transform ${TRANSFORM} --filter ${FILTER} --filter_size ${FILTER_SIZE} --bin_selection ${BIN_SELECTION} --blur_sigma ${BLUR_SIGMA} --pca_components_folder ${PCA_COMPONENTS_DIR} ${DATA_FILE} ${RESULTS_SUBDIR}/mpw50n04pca10.hdf5
+
+# Sticky HDP-HMM
+%s/find_scores.py hmm -n 2 -a 1 -g 1 -k 10 -num_pca 10 --type stickyhdp --transform ${TRANSFORM} --filter ${FILTER} --filter_size ${FILTER_SIZE} --bin_selection ${BIN_SELECTION} --blur_sigma ${BLUR_SIGMA} --pca_components_folder ${PCA_COMPONENTS_DIR} ${DATA_FILE} ${RESULTS_SUBDIR}/stickyhmmn2sticky10pca10.hdf5

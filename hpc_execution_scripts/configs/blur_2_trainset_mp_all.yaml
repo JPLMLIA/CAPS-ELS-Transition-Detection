@@ -1,0 +1,24 @@
+BLUR_SIGMA: 2
+COMBINED_MATRICES_DIR: /scratch_lg/image-content/ameyasd//blur_sigma_experiments/anscombe_transform/blur_2/ignore_unpaired/20min/new_labels/mp/all/
+COMBINED_MATRICES_FILE_BASENAME: /scratch_lg/image-content/ameyasd//blur_sigma_experiments/anscombe_transform/blur_2/ignore_unpaired/20min/new_labels/mp/all/combined_matrices_%s.npz
+COMMANDS_FILE: /scratch_lg/image-content/ameyasd/europa-onboard-science/src/caps_els/secondary_scripts/parameter_sweep_commands
+CREATION_COMMAND: ./create_config.py --mode train --results blur_sigma_experiments
+  --transform anscombe_transform --ignore_unpaired --commands parameter_sweep_commands
+  -b 2 --lbls new_labels/mp/all/ blur_2_trainset_mp_all.yaml
+DATA_DIR: /scratch_lg/image-content/ameyasd/crossings_updated/data/
+BIN_SELECTION: ignore_unpaired
+FILTER: no_filter
+FILTER_SIZE: 1
+LABELS_DIR: /scratch_lg/image-content/ameyasd/crossings_updated/new_labels/mp/all/
+LABELS_SUBDIR: new_labels/mp/all/
+MINIMUM_JOB_ARRAY_SIZE: 999
+MODE: train
+NUM_ALGORITHMS: 111
+NUM_DATAFILES: 9
+PCA_COMPONENTS_DIR: /scratch_lg/image-content/ameyasd//blur_sigma_experiments/anscombe_transform/blur_2/ignore_unpaired/pca_components/
+RANDOM_PLOTS_DIR: /scratch_lg/image-content/ameyasd//blur_sigma_experiments/anscombe_transform/blur_2/ignore_unpaired/random_plots/new_labels/mp/all/
+RESULTS_DIR: /scratch_lg/image-content/ameyasd//blur_sigma_experiments/anscombe_transform/blur_2/ignore_unpaired/
+SCRIPTS_DIR: /scratch_lg/image-content/ameyasd/europa-onboard-science/src/caps_els/
+THRESHOLDS_DIR: /scratch_lg/image-content/ameyasd//blur_sigma_experiments/anscombe_transform/blur_2/ignore_unpaired/thresholds/
+TIME_TOLERANCE: 20
+TRANSFORM: anscombe_transform

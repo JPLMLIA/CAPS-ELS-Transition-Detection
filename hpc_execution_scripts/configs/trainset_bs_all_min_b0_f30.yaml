@@ -1,0 +1,26 @@
+BIN_SELECTION: ignore_unpaired
+BLUR_SIGMA: 0
+COMBINED_MATRICES_DIR: /scratch_lg/image-content/ameyasd//filter_experiments/anscombe_transform/blur_0/ignore_unpaired/min_filter_30/20min/new_labels/bs/all/
+COMBINED_MATRICES_FILE_BASENAME: /scratch_lg/image-content/ameyasd//filter_experiments/anscombe_transform/blur_0/ignore_unpaired/min_filter_30/20min/new_labels/bs/all/combined_matrices_%s.npz
+COMMANDS_FILE: /scratch_lg/image-content/ameyasd/europa-onboard-science/src/caps_els/secondary_scripts/commands/parameter_sweep_commands
+CREATION_COMMAND: ./create_config.py --mode train --results filter_experiments --transform
+  anscombe_transform --bin_selection ignore_unpaired --commands commands/parameter_sweep_commands
+  -b 0 --lbls new_labels/bs/all/ -f min_filter -fsize 30 trainset_bs_all_min_b0_f30.yaml
+CROSSINGS_DIR: /scratch_lg/image-content/ameyasd/crossings_updated/
+DATA_DIR: /scratch_lg/image-content/ameyasd/crossings_updated/data/
+ERROR_ANALYSIS_DIR: /scratch_lg/image-content/ameyasd//filter_experiments/anscombe_transform/blur_0/ignore_unpaired/min_filter_30/error_analysis/new_labels/bs/all/
+FILTER: min_filter
+FILTER_SIZE: 30
+LABELS_DIR: /scratch_lg/image-content/ameyasd/crossings_updated/new_labels/bs/all/
+LABELS_SUBDIR: new_labels/bs/all/
+MINIMUM_JOB_ARRAY_SIZE: 2664
+MODE: train
+NUM_ALGORITHMS: 111
+NUM_DATAFILES: 24
+PCA_COMPONENTS_DIR: /scratch_lg/image-content/ameyasd//filter_experiments/anscombe_transform/blur_0/ignore_unpaired/min_filter_30/pca_components/
+RANDOM_PLOTS_DIR: /scratch_lg/image-content/ameyasd//filter_experiments/anscombe_transform/blur_0/ignore_unpaired/min_filter_30/random_plots/new_labels/bs/all/
+RESULTS_DIR: /scratch_lg/image-content/ameyasd//filter_experiments/anscombe_transform/blur_0/ignore_unpaired/min_filter_30/
+SCRIPTS_DIR: /scratch_lg/image-content/ameyasd/europa-onboard-science/src/caps_els/
+THRESHOLDS_DIR: /scratch_lg/image-content/ameyasd//filter_experiments/anscombe_transform/blur_0/ignore_unpaired/min_filter_30/thresholds/new_labels/bs/all/
+TIME_TOLERANCE: 20
+TRANSFORM: anscombe_transform

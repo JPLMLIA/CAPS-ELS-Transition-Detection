@@ -1,0 +1,26 @@
+BIN_SELECTION: center
+BLUR_SIGMA: 5
+COMBINED_MATRICES_DIR: /scratch_lg/image-content/ameyasd//pipeline_test/custom/20min/new_labels/valid/
+COMBINED_MATRICES_FILE_BASENAME: /scratch_lg/image-content/ameyasd//pipeline_test/custom/20min/new_labels/valid/combined_matrices_%s.npz
+COMMANDS_FILE: /scratch_lg/image-content/ameyasd/europa-onboard-science/src/caps_els/secondary_scripts/commands/parameter_sweep_commands_testset_blur2
+CREATION_COMMAND: ./create_config.py -b 5 pipeline_test.yaml --results pipeline_test
+  --mode train-v2 --commands commands/parameter_sweep_commands_testset_blur2 --bin_selection
+  center -f median_filter -fsize 120 --custom
+CROSSINGS_DIR: /scratch_lg/image-content/ameyasd/crossings_updated/
+DATA_DIR: /scratch_lg/image-content/ameyasd/crossings_updated/data/
+ERROR_ANALYSIS_DIR: /scratch_lg/image-content/ameyasd//pipeline_test/custom/error_analysis/new_labels/valid/
+FILTER: median_filter
+FILTER_SIZE: 120
+LABELS_DIR: /scratch_lg/image-content/ameyasd/crossings_updated/new_labels/valid/
+LABELS_SUBDIR: new_labels/valid/
+MINIMUM_JOB_ARRAY_SIZE: 124
+MODE: train-v2
+NUM_ALGORITHMS: 1
+NUM_DATAFILES: 124
+PCA_COMPONENTS_DIR: /scratch_lg/image-content/ameyasd//pipeline_test/custom/pca_components/
+RANDOM_PLOTS_DIR: /scratch_lg/image-content/ameyasd//pipeline_test/custom/random_plots/new_labels/valid/
+RESULTS_DIR: /scratch_lg/image-content/ameyasd//pipeline_test/custom/
+SCRIPTS_DIR: /scratch_lg/image-content/ameyasd/europa-onboard-science/src/caps_els/
+THRESHOLDS_DIR: /scratch_lg/image-content/ameyasd//pipeline_test/custom/thresholds/new_labels/valid/
+TIME_TOLERANCE: 20
+TRANSFORM: anscombe_transform
