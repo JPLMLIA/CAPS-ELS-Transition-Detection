@@ -51,9 +51,9 @@ def hmm_analysis(data, num_states=3, num_pca_components=None, verbose=False, eva
 
             pca = PCA(n_components=num_pca_components)
             sequence = pca.fit_transform(counts)
-            
+
             verbose_print('%0.2f%% of the variance explained by first %d components of PCA.'
-                        % ((np.sum(pca.fit(counts).explained_variance_ratio_[:num_pca_components]) * 100), num_pca_components))
+                         % ((np.sum(pca.fit(counts).explained_variance_ratio_[:num_pca_components]) * 100), num_pca_components))
         else:
             verbose_print('Loading components from folder %s...' % pca_components_folder)
             pca_components_file = pca_components_folder + 'pca%d_components.npy' % num_pca_components
@@ -62,7 +62,7 @@ def hmm_analysis(data, num_states=3, num_pca_components=None, verbose=False, eva
                 pca_components = np.load(pca_components_file)
                 sequence = np.matmul(counts - counts.mean(axis=0), pca_components.T)
             except IOError:
-                print('PCA components file %s not found.' % pca_components_file)
+                print 'PCA components file %s not found.' % pca_components_file
 
     else:
         sequence = counts
@@ -133,50 +133,8 @@ def hmm_analysis(data, num_states=3, num_pca_components=None, verbose=False, eva
 
     # Assign to state with maximum probability at each timestep.
     states = np.argmax(states_dist, axis=1)
-   
-    states_list, states_count = np.unique(states, return_counts=True)
-    # for state in states_list:
-    #     mu_peaks = peaks(model.emission_params(state)['mu'])
-    #     num_mu_peaks = len(mu_peaks)
-    #     if num_mu_peaks == 0:
-    #         peak_distance = 0
-    #     elif 0 < num_mu_peaks <= 2:
-    #         peak_distance = mu_peaks[-1] - mu_peaks[0]
-    #     else:
-    #         peak_distance = mu_peaks[num_mu_peaks//2 + 1] - mu_peaks[num_mu_peaks//2]
-
-    #     print 'State %d has peaks at indices %s giving it a score of %d.' % (state, mu_peaks, peak_distance)
-
     if len(states) != len(sequence):
         raise AssertionError
-
-    # reconstructions = {}
-    # for state, observation in zip(states, sequence):
-    #     sample = model.generate_samples(state, 1)
-
-    #     if state not in reconstructions:
-    #         reconstructions[state] = 0
-
-    #     reconstructions[state] += np.sqrt(np.sum(np.square(sample - observation)))
-
-    # for state, count in zip(reconstructions, states_count):
-    #     reconstructions[state] /= count
-
-    # print 'State-wise mean reconstructions:', reconstructions
-
-    # # Remove states that have high reconstruction.
-    # median_reconstruction = np.median(reconstructions.values())
-    # for state in reconstructions:
-    #     if reconstructions[state] > 2 * median_reconstruction:
-    #         states_dist[:, state] = 0
-
-    # for timestep, dist in enumerate(states_dist):
-    #     if np.sum(dist) == 0:
-    #         states_dist[timestep] = states_dist[timestep - 1]
-
-    # # Recompute after removing.
-    # states_dist /= np.sum(states_dist, axis=1, keepdims=True)
-    # states = np.argmax(states_dist, axis=1)
 
     # Time factor indicating how long each timestep is approximately in seconds.
     time_factor = round(np.min(np.diff(times)) * 60 * 60 * 24)
@@ -211,14 +169,14 @@ def hmm_analysis(data, num_states=3, num_pca_components=None, verbose=False, eva
         states = np.argmax(states_dist, axis=1)
 
     # Compute 'distances' between states.
-    print(states_dist.shape)
     all_emission_params = {state: model.emission_params(state) for state in range(num_states)}
     dissimilarities = np.zeros((num_states, num_states))
     for (index1, params1), (index2, params2) in itertools.product(all_emission_params.iteritems(), all_emission_params.iteritems()):
         dissimilarities[index1][index2] = kl_divergence_normals(params1['mu'], params1['sigma'], params2['mu'], params2['sigma']) \
                                         + kl_divergence_normals(params2['mu'], params2['sigma'], params1['mu'], params1['sigma'])
 
-    # Normalize dissimilarities such that the entire matrix sums up to 'num_states', just like the identity matrix would.
+    # Normalize dissimilarities such that the entire matrix sums up to 'num_states',
+    # just like the identity matrix would.
     dissimilarities *= num_states/np.sum(dissimilarities)
 
     # Score as difference in distributions.
@@ -263,7 +221,8 @@ def main(els_data_file, output_file, quantity, start_time, end_time, hmm_type, n
         end_time = datetime.max
 
     # Get data, and unpack.
-    counts, energy_ranges, times = get_ELS_data(els_data_file, quantity, start_time, end_time, **kwargs)
+    counts, energy_ranges, times = get_ELS_data(els_data_file, quantity,
+                                                start_time, end_time, **kwargs)
 
     # Segment with an HMM.
     model, states, log_likelihood, states_dist, scores = \
@@ -287,8 +246,10 @@ def main(els_data_file, output_file, quantity, start_time, end_time, hmm_type, n
 
     # Plot ELS data on top.
     fig, (ax0, ax1, ax2) = plt.subplots(nrows=3, sharex=True)
-    plot_interpolated_ELS_data(fig, ax0, els_data_file, quantity, start_time, end_time, 
-                                colorbar_range='subset', colorbar_orientation='horizontal', **kwargs)
+    plot_interpolated_ELS_data(fig, ax0, els_data_file, quantity,
+                               start_time, end_time,
+                               colorbar_range='subset',
+                               colorbar_orientation='horizontal', **kwargs)
     ax0.set_xlabel('')
 
     # Plot segments in different colours. We don't want to repeat colors across states.
@@ -337,8 +298,10 @@ def main(els_data_file, output_file, quantity, start_time, end_time, hmm_type, n
 
     # Add only supplied parameters to title.
     parameters = hmm_parameters[hmm_type]
-    parameter_string_all = ', '.join([parameter_strings[parameter] % eval(parameter) for parameter in parameters])
-    title = 'CAPS ELS Segmentation with %s-HMM \n %s \n Log-Likelihood = %0.2f' % (formatted_name[hmm_type], parameter_string_all, log_likelihood)
+    parameter_string_all = ', '.join([parameter_strings[parameter] % locals()[parameter]
+                                      for parameter in parameters])
+    title = 'CAPS ELS Segmentation with %s-HMM \n %s \n Log-Likelihood = %0.2f' \
+            % (formatted_name[hmm_type], parameter_string_all, log_likelihood)
     fig.text(s=title, x=0.5, y=0.03, horizontalalignment='center', fontsize=13)
 
     plt.subplots_adjust(bottom=0.4, left=0.1, right=0.8)
