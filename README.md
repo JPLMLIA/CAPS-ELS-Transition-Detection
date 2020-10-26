@@ -45,6 +45,10 @@ This implements the HOT SAX pipeline, from [[4]](https://www.cs.ucr.edu/~eamonn/
 #### Matrix Profile (matrix_profile_analysis)
 This implements the Multidimensional Matrix Profile pipeline, built on top of the original Matrix Profile pipeline from [[6]](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=7837992&isnumber=7837813), with [matrixprofile-ts](https://github.com/ameya98/matrixprofile-ts), for CAPS ELS data.
 
+## Contact
+
+ameya.d.98@gmail.com (Ameya Daigavane)
+
 ## References
 [1] Teh, Y. W., Jordan, M. I., Beal, M. J., Blei, D. M.,  
 **Hierarchical Dirichlet Processes**. Journal of the American Statistical Association, 2006.
